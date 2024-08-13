@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=LXGW+WenKai+Mono+TC&family=Merienda&family=Gloria+Hallelujah&family=Zeyada&family=Playwrite+VN:wght@100..400&display=swap');
+@font-face {
+    font-family: Belladonia;
+    src: url(../font/Belladonia.ttf);
+}
+
+/* 
+usable fonts:
+Merienda
+Playwrite VN
+Gloria Hallelujah  
+Zeyada
+LXGW WenKai Mono TC
+Meow Script
+*/
+:root{
+    --lightgold: rgb(235, 197, 99);
+    --bgcolor: rgb(35, 35, 35);
+    --light: rgb(235, 197, 99);
+
+    --delay: 0.5s;
+    --root_time: calc(0.4s / 322);
+
+    --time_X1: calc(var(--root_time) * 322);
+    --time_X2: calc(var(--root_time) * 240);
+    --time_i1: calc(var(--root_time) * 83.2);
+    --time_i2: calc(var(--root_time) * 5);
+    --time_n: calc(var(--root_time) * 275.2);
+    --time_c: calc(var(--root_time) * 162);
+    --time_h: calc(var(--root_time) * 527);
+    --time_a: calc(var(--root_time) * 268);
+    --time_o: calc(var(--root_time) * 296.2);
+    --time_faling: calc(var(--root_time) * 29.1);
+
+    --delay_X2: calc(var(--delay) + var(--time_X1));
+    --delay_i1: calc(var(--delay_X2) + var(--time_X2));
+    --delay_i2: calc(var(--delay_i1) + var(--time_i1));
+    --delay_n: calc(var(--delay_i2) + var(--time_i2));
+    --delay_c: calc(var(--delay_n) + var(--time_n));
+    --delay_h: calc(var(--delay_c) + var(--time_c));
+    --delay_a: calc(var(--delay_h) + var(--time_h));
+    --delay_o: calc(var(--delay_a) + var(--time_a));
+    --delay_faling: calc(var(--delay_o) + var(--time_o));
+}
+/* :focus{
+    outline: none;
+} */
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+body{
+    font-family: "Merienda";
+    background-color: var(--bgcolor);
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+section, .container_hello{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    scroll-margin-top: 150px;
+}
+section{
+    width: 100vw;
+    height: calc(100vh - 170px);
+    position: relative;
+    top: calc(100vh - 10px);
+    left: 10px;
+    padding: 10px;
+    color: black;
+    background-color: wheat;
+}
+.title{
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bgcolor);
+    top: 0px;
+    left: 0px;
+    padding-left: 40px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    transform-origin: top;
+    user-select: none;
+    z-index: 2;
+    transform: translateY(-150px);
+    transition: 1s all ease;
+}
+
+.title.active{
+    transform: translateY(0);
+}
+
+.title .vietnamese{
+    position: absolute;
+    font-family: "Meow Script";
+    font-size: 80px;
+    background-image: radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #73F2FFFF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 73% 59%, #D3FF6D9C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%);    color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    height: 100px;
+    top: 20px;
+    right: 500px;
+    /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod; */
+}
+
+/* .hello{
+    font-family: "Playwrite VN";
+    font-size: 150px;
+    font-style: italic;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+} */
+
+.container_hello{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../res/image/hoguom.jpg) no-repeat fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    filter: drop-shadow(5px 5px 5px #685b3a);
+    animation: fade_in 2s ease-in-out 1 alternate forwards;
+}
+
+.hello{
+    /* font: Meow Script */
+    width:  907.5px;
+    height: 271.5px;
+    position: absolute;
+    top: 40px;
+    border-radius: 50px;
+    clip-path: polygon(50% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%, 0 0);
+    background: radial-gradient(rgba(245, 222, 179, 0), rgba(245, 222, 179, 0));
+    filter: drop-shadow(5px 5px 5px black);
+    animation: fade_up 2s ease-in-out 1 alternate forwards;
+}
+#X1{
+    stroke-dasharray: 332;
+    stroke-dashoffset: 332;
+    animation: write_X1 var(--time_X1) linear var(--delay) 1 alternate forwards;
+}
+#X2{
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    animation: write_X2 var(--time_X2) linear var(--delay_X2) 1 alternate forwards;
+}
+#i1{
+    stroke-dasharray: 83.2;
+    stroke-dashoffset: 83.2;
+    animation: write_i1 var(--time_i1) linear var(--delay_i1) 1 alternate forwards;
+}
+#i2{
+    stroke-dasharray: 5;
+    stroke-dashoffset: 5;
+    animation: write_i2 var(--time_i2) linear var(--delay_i2) 1 alternate forwards;
+}
+#n{
+    stroke-dasharray: 275.2;
+    stroke-dashoffset: 275.2;
+    animation: write_n var(--time_n) linear var(--delay_n) 1 alternate forwards;
+}
+#c{
+    stroke-dasharray: 162;
+    stroke-dashoffset: 162;
+    animation: write_c var(--time_c) linear var(--delay_c) 1 alternate forwards;
+}
+#h{
+    stroke-dasharray: 527;
+    stroke-dashoffset: 527;
+    animation: write_h var(--time_h) linear var(--delay_h) 1 alternate forwards;
+}
+#a{
+    stroke-dasharray: 268;
+    stroke-dashoffset: 268;
+    animation: write_a var(--time_a) linear var(--delay_a) 1 alternate forwards;
+}
+#o{
+    stroke-dasharray: 296.2;
+    stroke-dashoffset: 296.2;
+    animation: write_o var(--time_o) linear var(--delay_o) 1 alternate forwards;
+}
+#falling{
+    stroke-dasharray: 29.1;
+    stroke-dashoffset: 29.1;
+    animation: write_falling var(--time_faling) linear var(--delay_faling) 1 alternate forwards;
+}
+
+@keyframes write_X1 {
+    0%{
+        stroke-dashoffset: 322;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_X2 {
+    0%{
+        stroke-dashoffset: 240;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_i1 {
+    0%{
+        stroke-dashoffset: 83.2;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_i2 {
+    0%{
+        stroke-dashoffset: 5;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_n {
+    0%{
+        stroke-dashoffset: 275.2;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_c {
+    0%{
+        stroke-dashoffset: 162;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_h {
+    0%{
+        stroke-dashoffset:527;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_a {
+    0%{
+        stroke-dashoffset: 268;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_o {
+    0%{
+        stroke-dashoffset: 296.2;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes write_falling {
+    0%{
+        stroke-dashoffset: 29.1;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod;
+    }
+
+    to{
+        text-shadow: 0 0 20px #fff, 0 0 30px rgb(235, 197, 99), 0 0 40px rgb(235, 197, 99), 0 0 50px rgb(235, 197, 99), 0 0 60px rgb(235, 197, 99), 0 0 70px rgb(235, 197, 99), 0 0 80px rgb(235, 197, 99), 0 0 90px rgb(235, 197, 99), 0 0 100px rgb(235, 197, 99);
+    }
+}
+
+.reveal{
+    /* transform: translateY(150px); */
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes fade_in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fade_up {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

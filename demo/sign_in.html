@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale 1.0">
+    <link rel="icon" type="png" 
+    href="res/image/web_icon.png">
+    <title>Đăng nhập CAL Language Center</title>
+    <link rel="stylesheet" href="css/style_sign_in.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="title">
+      <a href="index.html" class="name prevent_select" title="Lunagacy">
+        <!-- <h1>Lunagacy Language Center</h1> -->
+         <img src="res/image/logo.png" alt="logo" width="250px">
+      </a>
+    </div>
+
+		<div class="light"></div>
+
+    <div class="container container_sign_in">
+    	<div class="toggle toggle_sign_in">
+				<div class="element">
+					<h1>Chào mừng <br> quay trở lại!</h1>
+					
+    	    <p><i>Chưa có tài khoản?</i></p>
+    	    <a href="sign_up.html"><button id="sign_up_btn">Đăng ký ngay</button></a>
+				</div>
+    	</div>
+
+      <form action="server.php" method="get">
+        <h1>Đăng nhập</h1>
+        <div class="icons">
+          <a href=""><i class='bx bxl-google'></i></i></a>
+          <a href=""><i class='bx bxl-facebook'></i></i></a>
+        </div>
+
+        <hr> 
+
+        <p><i>Đăng nhập bằng tài khoản Lunagacy</i></p>
+
+        <input type="text" id="username" placeholder="Tên người dùng" required> <br>
+        <input type="password" id="password" placeholder="Mật khẩu" required> <br>
+				<a href="forgot_pw.html" id="fgpw">Quên mật khẩu?</a>
+
+        <button>Đăng nhập</button>
+        
+      </form>
+    </div>
+
+  </body>
+</html>

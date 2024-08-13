@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Merienda&family=Gloria+Hallelujah&family=Zeyada&family=Playwrite+VN:wght@100..400&display=swap');
+/* 
+usable fonts:
+Merienda
+Playwrite VN
+Gloria Hallelujah  
+Zeyada
+LXGW WenKai Mono TC
+*/
+
+:root{
+    --lightgold: rgb(235, 197, 99);
+    --bgcolor: rgb(35, 35, 35);
+    --light: rgb(235, 197, 99);
+}
+
+body{
+    font-family: "Merienda";
+    background-color: var(--bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.prevent_select{
+    user-select: none;
+}
+.title{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    transform-origin: top;
+    transform: scale(0.8, 0.8);
+}
+
+.container_sign_in{
+    margin-top: 20px;
+    background-color: var(--bgcolor);
+    width: 800px;
+    height: 420px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px gray;
+    display: inline-flex;
+}  
+
+.container_sign_in form{
+    color: wheat;
+    width: 400px;
+    height: 400px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    line-height: 10px;
+    z-index: 0;
+}
+
+form h1{
+    color: goldenrod;
+}
+
+form input{
+    background-color: beige;
+    font-size: 20px;
+    font-family: "LXGW WenKai Mono TC";
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    box-shadow: 0 0 5px gray;
+}
+
+form #fgpw{
+    text-decoration: none;
+    color: beige;
+    padding: 15px;
+}
+
+.icons{
+    margin-top: 20px ;
+    margin-bottom: 10px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.icons a{
+    background-color: wheat;
+    text-decoration: none;
+    color: rgb(1, 1, 72);
+    position: relative;
+    font-size: 40px;
+    border-radius: 20%;
+    box-shadow: 0 0 5px wheat;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    width: 300px;
+}
+
+.container_sign_in button{
+    position: relative;
+    top: 15px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Merienda";
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    width: 160px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.toggle{
+    background-color: var(--light);
+    width: 400px;
+    height: 420px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    animation: move_left_sign_in 0.5s ease-in-out 1 alternate forwards;
+
+}
+.toggle h1{
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+.toggle p{
+    position: relative;
+    top: 10px;
+    line-height: 0;
+}
+.toggle .element{
+    animation: move_right_sign_in 0.5s ease-in-out 1 alternate forwards;
+}
+.container_sign_in form{
+    animation: move_sign_in 0.5s ease-in-out 1 alternate forwards;
+}
+
+@keyframes move_right_sign_in {
+    from{
+        transform: translateX(-440px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes move_left_sign_in {
+    from{
+        transform: translateX(400px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes move_sign_in {
+    from{
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+.light{
+    width: 200px;
+    height: 400px;
+    margin-top: -80px;
+    clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(180deg, rgba(235, 197, 99, 0.8),rgba(235, 197, 99, 0));
+    z-index: -5;
+    position: absolute;
+    transform-origin: top;
+    opacity: 0;
+    animation: light_rotate 1s ease 1 alternate forwards;
+}
+@keyframes light_rotate{
+    from{
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+    to{
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+}

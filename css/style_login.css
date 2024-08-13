@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Merienda&family=Gloria+Hallelujah&family=Zeyada&family=Playwrite+VN:wght@100..400&display=swap');
+/* 
+usable fonts:
+Merienda
+Playwrite VN
+Gloria Hallelujah  
+Zeyada
+LXGW WenKai Mono TC
+*/
+
+:root{
+    --lightgold: rgb(235, 197, 99);
+    --bgcolor: rgb(35, 35, 35);
+    --light: rgb(235, 197, 99);
+    --delay: 0.5s;
+}
+
+.fade_in{
+    opacity: 0;
+    animation: fade_in 0.5s ease-in-out var(--delay) 1 alternate forwards;
+}
+
+body{
+    font-family: "Merienda";
+    background-color: var(--bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.title{
+    display: flex;
+    box-sizing: border-box;
+    transform-origin: top;
+    user-select: none;
+}
+
+.transition{
+    animation: shrink 0.5s ease-in-out 1 alternate forwards;
+}
+
+@keyframes shrink {
+    from{
+        transform: scale(1, 1) 
+                    translateX(-30vw);
+    }
+    to{
+        transform: scale(0.8, 0.8)
+                    translateX(0px);
+    }
+}
+
+.container{
+    margin-top: 20px;
+    background-color: var(--bgcolor);
+    width: 800px;
+    height: 420px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px gray;
+    display: none;
+    position: relative;
+    z-index: 0;
+}
+
+form{
+    color: wheat;
+    width: 400px;
+    height: 400px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    line-height: 10px;
+    z-index: 0;
+}
+
+form h1{
+    color: goldenrod;
+}
+
+form input{
+    background-color: beige;
+    font-size: 20px;
+    font-family: "LXGW WenKai Mono TC";
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    box-shadow: 0 0 5px gray;
+}
+
+form #fgpw{
+    text-decoration: none;
+    color: beige;
+    padding: 15px;
+}
+
+.icons{
+    margin-top: 20px ;
+    margin-bottom: 10px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.icons a{
+    background-color: wheat;
+    text-decoration: none;
+    color: rgb(1, 1, 72);
+    position: relative;
+    font-size: 40px;
+    border-radius: 20%;
+    box-shadow: 0 0 5px wheat;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    width: 300px;
+}
+
+button{
+    position: relative;
+    top: 15px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Merienda";
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    width: 160px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.toggle{
+    background-color: var(--light);
+    box-shadow: 0 0 15px var(--light),
+                0 0 15px white inset;
+    width: 400px;
+    height: 420px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.toggle_sign_up{
+    animation: move_right_sign_up 0.5s ease-in-out var(--delay) 1 alternate forwards;
+}
+
+.toggle_sign_in{
+    animation: move_left_sign_in 0.5s ease-in-out 1 alternate forwards;
+}
+
+.toggle h1{
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+.toggle p{
+    position: relative;
+    top: 10px;
+    line-height: 0;
+}
+.toggle_sign_up .element{
+    animation: move_left_sign_up 0.5s ease-in-out var(--delay) 1 alternate forwards;
+}
+
+.toggle_sign_in .element{
+    animation: move_right_sign_in 0.5s ease-in-out 1 alternate forwards;
+}
+
+.container_sign_up form{
+    animation: move_sign_up_form 0.5s ease-in-out var(--delay) 1 alternate forwards;
+}
+
+.container_sign_in form{
+    animation: move_sign_in_form 0.5s ease-in-out 1 alternate forwards;
+}
+
+@keyframes move_right_sign_up {
+    from{
+        transform: translateX(-400px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes move_left_sign_up {
+    from{
+        transform: translateX(440px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes move_sign_up_form {
+    from{
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes move_right_sign_in {
+    from{
+        transform: translateX(-440px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes move_left_sign_in {
+    from{
+        transform: translateX(400px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes move_sign_in_form {
+    from{
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+.light{
+    width: 200px;
+    height: 400px;
+    margin-top: -80px;
+    clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(180deg, rgba(235, 197, 99, 0.8),rgba(235, 197, 99, 0));
+    z-index: -5;
+    position: absolute;
+    transform-origin: top;
+    display: none;
+    opacity: 0;
+}
+
+.left_to_right{
+    animation: light_rotate1 1s ease var(--delay) 1 alternate forwards;
+}
+.right_to_left{
+    animation: light_rotate2 1s ease var(--delay) 1 alternate forwards;
+}
+
+@keyframes light_rotate1{
+    from{
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+    to{
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+}
+@keyframes light_rotate2{
+    from{
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+    to{
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+}
+@keyframes fade_in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.active{
+    display: inline-flex;
+}

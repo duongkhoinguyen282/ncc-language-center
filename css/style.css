@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Merienda&family=Gloria+Hallelujah&family=Zeyada&family=Playwrite+VN:wght@100..400&display=swap');
+/* 
+usable fonts:
+Merienda
+Playwrite VN
+Gloria Hallelujah  
+Zeyada
+LXGW WenKai Mono TC
+*/
+body{
+    font-family: "Merienda";
+    background-color: rgb(35, 35, 35);
+    overflow-x: hidden;
+}
+img{
+    transform-origin: top;
+}
+.transition{
+    animation: grow 0.5s ease-in-out 1 alternate forwards;
+}
+.title{
+    margin-top: 2vh;
+    margin-left: 8.5vw;
+    display: inline-block;
+    box-sizing: border-box;
+    transform-origin: top;
+    user-select: none;
+}
+.title:hover .light{
+    animation: lighting 0.2s 0.5s ease-in-out alternate forwards;
+}
+
+.slogan{
+    -webkit-text-stroke: 0.5px goldenrod;
+    color: beige;
+    font-family: "Playwrite VN";
+    font-style: italic;
+    font-size: 30px;
+    box-sizing: border-box;
+    margin-top: -175px;
+    margin-left: 400px;
+    position: absolute;
+    opacity: 0;
+}
+.title:hover .slogan{
+    -webkit-text-stroke: 0.2px darkgoldenrod;
+    color: rgb(0, 0, 0);
+    transition-delay: 0.6s;
+    cursor: default;
+    animation: glow 2s 0.6s ease-in-out infinite alternate;
+    opacity: 1;
+}
+
+.login{
+    height: auto;
+    height: 20px;
+    float: right;
+    margin-right: 140px;
+    margin-top: 295px;
+    padding: 15px;
+    background-color: wheat;
+    border-radius: 20px;
+    font-family: "LXGW WenKai Mono TC";
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.login a{
+    text-decoration: none;
+    color:rgb(211, 0, 0);
+    position: relative;
+    z-index: 1;
+}
+.login:hover a{
+    animation: glow 1s infinite alternate forwards;
+}
+
+.login:hover .circle{
+    display: flex;
+    animation: scale_up 1s alternate forwards;
+}
+.navbar{
+    margin-left: 8.5vw;
+    display: inline-block;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color:wheat;
+    padding: 0px;
+    overflow: hidden;
+}
+.navbar .option{
+    text-decoration: none;
+    color: rgb(1, 1, 72);
+    font-weight: bold;
+    /* -webkit-text-stroke: 1px gray; */
+    padding: 20px;
+    display: block;
+    text-align: center;
+    min-width: 150px;
+    height: 20px;
+}
+.navbar .option:hover{
+    background-color: rgb(226, 200, 132);
+    transition: 0.5s; 
+    animation: glow 1s infinite alternate forwards;
+}
+.navbar li{
+    float: left;
+}
+
+.dropdown{
+    display: inline-block;
+}
+
+.dropdown:hover{
+    background-color: rgb(226, 200, 132);
+    transition: 0.5s;
+}
+
+.dropdown a{
+    text-decoration: none;
+    color: rgb(2, 117, 90);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    min-width: 150px;
+    height: 20px;
+}
+
+.dropdown:hover .language{
+    display: block;
+    background-color:antiquewhite;
+}
+
+.dropdown .language{
+    display: none;
+    position: absolute;
+}
+
+.dropdown .language a:hover{
+    color: cadetblue;
+    -webkit-text-stroke: 0.5px beige;
+}
+
+#chinese:hover{
+    background-image: url(../res/image/china_flag.gif);
+    background-repeat: no-repeat;
+    background-size: 210px 70px;
+    background-position-x: -8px;
+    background-position-y: -3px;
+    backdrop-filter: blur(1000px);
+}
+#vietnamese:hover{
+    background: url(../res/image/vietnam_flag.gif);
+    background-repeat: no-repeat;
+    background-size: 210px 70px;
+    background-position-x: -10px;
+    background-position-y: -3px;
+}
+#korean:hover{
+    background: url(../res/image/s_korea_flag.gif);
+    background-repeat: no-repeat;
+    background-size: 190px 60px;
+    backdrop-filter: blur(1000px);
+
+}
+
+@keyframes lighting{
+    0%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0),
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0), 
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0));
+    }     
+    12.5%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0.8), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0),
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0), 
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0));
+    }    
+    25%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0.8), rgba(235, 197, 99, 0.7),rgba(235, 197, 99, 0),
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0), 
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0));
+    }    
+    37.5%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0.8), rgba(235, 197, 99, 0.7),rgba(235, 197, 99, 0.6),
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0), 
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0));
+    }    
+    50%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0.8), rgba(235, 197, 99, 0.7),rgba(235, 197, 99, 0.6),
+        rgba(235, 197, 99, 0.5), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0), 
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0));
+    }    
+    62.5%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0.8), rgba(235, 197, 99, 0.7),rgba(235, 197, 99, 0.6),
+        rgba(235, 197, 99, 0.5), rgba(235, 197, 99, 0.4),rgba(235, 197, 99, 0), 
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0));
+    }
+    75%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0.8), rgba(235, 197, 99, 0.7),rgba(235, 197, 99, 0.6),
+        rgba(235, 197, 99, 0.5), rgba(235, 197, 99, 0.4),rgba(235, 197, 99, 0.3), 
+        rgba(235, 197, 99, 0), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0));
+    }
+    87.5%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0.8), rgba(235, 197, 99, 0.7),rgba(235, 197, 99, 0.6),
+        rgba(235, 197, 99, 0.5), rgba(235, 197, 99, 0.4),rgba(235, 197, 99, 0.3), 
+        rgba(235, 197, 99, 0.2), rgba(235, 197, 99, 0),rgba(235, 197, 99, 0));
+    }
+    100%{background-image: linear-gradient(90deg, rgba(235, 197, 99, 0.9),
+        rgba(235, 197, 99, 0.8), rgba(235, 197, 99, 0.7),rgba(235, 197, 99, 0.6),
+        rgba(235, 197, 99, 0.5), rgba(235, 197, 99, 0.4),rgba(235, 197, 99, 0.3), 
+        rgba(235, 197, 99, 0.2), rgba(235, 197, 99, 0.1),rgba(235, 197, 99, 0));
+    }
+}
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod;
+    }
+
+    to{
+        text-shadow: 0 0 20px #fff, 0 0 30px rgb(235, 197, 99), 0 0 40px rgb(235, 197, 99), 0 0 50px rgb(235, 197, 99), 0 0 60px rgb(235, 197, 99), 0 0 70px rgb(235, 197, 99), 0 0 80px rgb(235, 197, 99), 0 0 90px rgb(235, 197, 99), 0 0 100px rgb(235, 197, 99);
+    }
+}
+
+@keyframes scale_up{
+    100%{transform: scale(5,5)}
+} 
+
+@keyframes running_light {
+    100%{border: 3px solid red}
+}
+@keyframes fade_in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes grow {
+    from{
+        transform: scale(0.8, 0.8) 
+                    translateX(calc(50vw - 125px));
+    }
+    to{
+        transform: scale(1, 1)
+                    translateX(0px);
+    }
+}
+
+.fade_in{
+    animation: fade_in 0.5s 0.5s 1 alternate forwards;
+}
+
+.light{
+    width: 650px;
+    height: 100px;
+    margin-left: 205px;
+    margin-top: -190px;
+    clip-path: polygon(0% 30%, 0% 70%, 100% 100%, 100% 0);
+    background-color: transparent;
+    z-index: -1;
+    position: absolute;
+}
+
+.login .circle{
+    background-color: rgb(25, 204, 204);
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin-top: -20px;
+    margin-left: -40px;
+    display: none;
+    border-radius: 50%;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale 1.0">
+    <link rel="icon" type="png" 
+    href="../res/image/web_icon.png">
+    <title>Đăng ký học CAL Language Center</title>
+    <link rel="stylesheet" href="../css/style_login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../js/script_login.js"></script>
+  </head>
+
+  <body>
+    <div class="title transition" id="title">
+      <a href="index.html" title="Lunagacy">
+         <img src="../res/image/logo.png" alt="logo" width="250px">
+      </a>
+    </div>
+
+    <div class="light left_to_right active" id="light1"></div>
+    <div class="light right_to_left" id="light2"></div>
+
+    <div class="container container_sign_up active fade_in" id="sign_up">
+      <form action="server.php" method="get">
+        <h1>Đăng ký</h1>
+        <div class="icons">
+          <a href=""><i class='bx bxl-google'></i></i></a>
+          <a href=""><i class='bx bxl-facebook'></i></i></a>
+        </div>
+
+        <hr> 
+
+        <p><i>Tạo tài khoản Lunagacy</i></p>
+
+        <input type="text" id="name" placeholder="Tên của bạn" required> <br>
+        <input type="text" id="username" placeholder="Tên người dùng" required> <br>
+        <input type="password" id="password" placeholder="Mật khẩu" required> <br>
+
+        <button>Đăng ký</button>
+        
+      </form>
+
+      <div class="toggle toggle_sign_up">
+        <div class="element">
+          <h1>Chào mừng đến với Lunagacy!</h1>
+          <p><i>Đã có tài khoản?</i></p>
+					<button onclick="change_to_sign_in()">Đăng nhập</button>
+        </div>
+      </div>
+    </div>
+
+		<div class="container container_sign_in" id="sign_in">
+    	<div class="toggle toggle_sign_in">
+				<div class="element">
+					<h1>Chào mừng <br> quay trở lại!</h1>
+					
+    	    <p><i>Chưa có tài khoản?</i></p>
+					<button onclick="change_to_sign_up()">Đăng ký ngay</button>
+				</div>
+    	</div>
+
+      <form action="server.php" method="get">
+        <h1>Đăng nhập</h1>
+        <div class="icons">
+          <a href=""><i class='bx bxl-google'></i></i></a>
+          <a href=""><i class='bx bxl-facebook'></i></i></a>
+        </div>
+
+        <hr> 
+
+        <p><i>Đăng nhập bằng tài khoản Lunagacy</i></p>
+
+        <input type="text" id="username" placeholder="Tên người dùng" required> <br>
+        <input type="password" id="password" placeholder="Mật khẩu" required> <br>
+				<a href="forgot_pw.html" id="fgpw">Quên mật khẩu?</a>
+
+        <button>Đăng nhập</button>
+        
+      </form>
+    </div>
+
+  </body>
+</html>
